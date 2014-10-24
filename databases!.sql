@@ -177,7 +177,7 @@ SELECT COUNT(*) FROM employees;
 
 -- Grouping
 
-SELECT COUNT(*) FROM employees GROUP BY department_id;
+SELECT employees.department_id, COUNT(*) FROM employees GROUP BY department_id;
 
 -- Aggregate functions return aggregate columns
 
@@ -271,8 +271,11 @@ FROM employees
 INNER JOIN departments ON employees.department_id = departments.id;
 
 -- In these cases avg() became a window function automatically. There are other things that are just window functions.
+
+-- *************
 -- Look at subforum_group_index_query.rb.
 -- Look at threads_with_visited_status view.
+-- *************
 
 
 -- EXPLAIN
